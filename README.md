@@ -1,24 +1,41 @@
 # peepervim
 a lazy.nvim config for neovim, featuring my cat, peepers.
 
+![the guy himself](/assets/peepers-thumb.png)
+
+![preview](https://github.com/ian-r-b/peepervim#preview)
+
+![install](https://github.com/ian-r-b/peepervim#to-install)
+
+![plugin list](https://github.com/ian-r-b/peepervim#plugin-list)
+
+![notes](https://github.com/ian-r-b/peepervim#notes)
+
 to install:
 -----------
-`git clone https://github.com/ian-r-b/peepervim ~/.config/neovim`
+`git clone https://github.com/ian-r-b/peepervim ~/.config/nvim`
 
 -----------
 
-init is located at config root. plugins are located at `lua/config/lazy.lua`. all plugin configs are located at `lua/config/plugins.lua`. start screen themes are located at `lua/startup/themes/`.
+notes
+------
 
-to change the startup theme, you can edit the last line of `init.lua`. there are three included peepers-centric themes, aptly named `peepervim-1`, `peepervim-2`, and `peepervim-3`.
+- init is located at config root. plugins are located at `lua/config/lazy.lua`. all plugin configs are located at `lua/config/plugins.lua`. start screen themes are located at `lua/startup/themes/`.
 
-to change colorscheme, set another one to install in `lazy.lua`, (optionally) remove the old theme (`rebelot/kanagawa.nvim`), and change this line in `init.lua`:
+----
+
+- to change the startup theme, you can edit the last line of `init.lua`. there are three included peepers-centric themes, aptly named `peepervim-1`, `peepervim-2`, and `peepervim-3`.
+
+----
+
+- to change colorscheme, set another one to install in `lazy.lua`, (optionally) remove the old theme (`rebelot/kanagawa.nvim`), and change this line in `init.lua`:
 ```
 vim.cmd [[ colorscheme {your-colorscheme-here} ]]
 ```
 
-note:
---------
-inputs are displayed via `screenkey.nvim`. to disable screenkey (the `motions` window) on boot, comment/remove this block at the bottom of `plugins.lua`:
+----
+
+- inputs are displayed via `screenkey.nvim`. to disable screenkey (the `motions` window) on boot, comment/remove this block at the bottom of `plugins.lua`:
 ```
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function() vim.schedule(function() vim.cmd("Screenkey") end) end,
@@ -50,3 +67,8 @@ plugin list
 - `nvim-neo-tree/neo-tree.nvim`
 - `willothy/nvim-cokeline`
 - `stevearc/resession.nvim`
+
+preview
+----------
+![startup screen](/assets/startup-screen.png)
+![ui](/assets/ui.png)
