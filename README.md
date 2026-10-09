@@ -5,6 +5,8 @@ to install:
 -----------
 `git clone https://github.com/ian-r-b/peepervim ~/.config/neovim`
 
+-----------
+
 init is located at config root. plugins are located at `lua/config/lazy.lua`. all plugin configs are located at `lua/config/plugins.lua`. start screen themes are located at `lua/startup/themes/`.
 
 to change the startup theme, you can edit the last line of `init.lua`. there are three included peepers-centric themes, aptly named `peepervim-1`, `peepervim-2`, and `peepervim-3`.
